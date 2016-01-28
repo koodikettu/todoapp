@@ -1,0 +1,29 @@
+.right {
+    text-align: right;
+}
+
+.todoItem {
+    border-top: 1px solid rgb(200,200,200);
+    padding: 0.5em;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.green {
+    color: green;
+}
+
+.todoContainer {
+    border: 1px solid rgb(200,200,200);
+}
+
+.okColumn {
+    width: 40px;
+}
+
+.inlineBlock {
+    display: inline;
+}

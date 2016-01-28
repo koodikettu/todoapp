@@ -1,0 +1,82 @@
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{lomakkeenOtsikko}}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+
+            <div class="form form-group">
+                <label>
+                    Nimi
+                </label>
+                <input class="form-control" type="text" ng-model="nimikentta">
+            </div>   
+        </div>
+        <div class="col-md-2">
+            <div class="form form-group">
+                <label>
+                    Prioriteetti
+                </label>
+                <input class="form-control" type="text" ng-model="prioriteettikentta">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-8">
+                <button ng-show="!todoBeingEdited" class="btn btn-primary" ng-click="addTodo();">Lisää tehtävä</button>
+                <button ng-show="todoBeingEdited" class="btn btn-primary" ng-click="saveTodo();">Tallenna</button>
+                <button ng-show="todoBeingEdited" class="btn btn-primary" ng-click="cancelEdit();">Peruuta</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <div class="todoItem" ng-repeat="tehtava in todoList">
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div style="display: inline;">
+                        <input type="checkbox" ng-model="tehtava.suoritettu" ng-change="laskeTilastot()">
+
+                        {{tehtava.nimi}} ({{tehtava.prioriteetti}})
+                    </div>
+                    <div class="okColumn" style="display: inline;">
+                        <span ng-class="{'hidden': !tehtava.suoritettu}" class="glyphicon glyphicon-ok green"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <button class="btn btn-warning right" ng-click="editTodo(tehtava)">
+                        <span class="glyphicon glyphicon-edit"> 
+
+                        </span>
+                        Muokkaa
+                    </button>
+                    <button class="btn btn-danger right" ng-click="removeTodo(tehtava)">
+                        <span class="glyphicon glyphicon-trash"> 
+
+                        </span>
+                        Poista
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<hr>
+Tehtäviä yhteensä {{todoList.length}}, joista {{tekemattomienMaara}} tekematöntä.
