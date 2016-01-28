@@ -27,3 +27,29 @@
 .inlineBlock {
     display: inline;
 }
+
+.otsikko {
+    padding: 1px 12px 12px 12px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    background-color: #CECECE;
+}
+
+.lomake {
+    padding: 1px 12px 12px 12px;
+    margin-bottom: 8px;
+    background-color: #F5F5F5;
+}
+
+.lista {
+    padding: 1px 12px 12px 12px;
+    margin-bottom: 8px;
+    background-color: #F5F5F5;
+}
+
+.footer {
+    padding: 6px 12px 12px 12px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    background-color: #CECECE;
+}
