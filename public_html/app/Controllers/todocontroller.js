@@ -1,3 +1,6 @@
+
+// Markku Laakso, 2016
+
 ToDoApp.controller('ToDoController', function ($scope) {
 
     $scope.todoList = [];
@@ -16,20 +19,25 @@ ToDoApp.controller('ToDoController', function ($scope) {
     });
 
     sortTodoList();
+
     $scope.addTodo = function () {
         var prioriteetti = parseInt($scope.prioriteettikentta);
-        if (!isNaN(prioriteetti)) {
-            $scope.todoList.push({
-                "nimi": $scope.nimikentta,
-                "prioriteetti": prioriteetti,
-                "suoritettu": false
-            });
-        }
-        else {
+        if (isNaN(prioriteetti)) {
             alert('prioriteetin on oltava numero!');
             $scope.prioriteettikentta = '';
             return;
         }
+
+        if ($scope.nimikentta.length<2) {
+            alert('nimen on oltava vähintään 2 merkkiä pitkä!');
+            return;
+        }
+
+        $scope.todoList.push({
+            "nimi": $scope.nimikentta,
+            "prioriteetti": prioriteetti,
+            "suoritettu": false
+        });
         $scope.nimikentta = '';
         $scope.prioriteettikentta = '';
         $scope.laskeTilastot();
@@ -38,6 +46,10 @@ ToDoApp.controller('ToDoController', function ($scope) {
     $scope.removeTodo = function (tehtava) {
         $scope.todoList.splice($scope.todoList.indexOf(tehtava), 1);
         $scope.laskeTilastot();
+        $scope.nimikentta = '';
+        $scope.prioriteettikentta = '';
+        $scope.lomakkeenOtsikko = 'Lisää tehtävä';
+        $scope.todoBeingEdited = null;
         sortTodoList();
     };
     $scope.editTodo = function (tehtava) {

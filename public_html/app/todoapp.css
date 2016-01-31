@@ -1,3 +1,14 @@
+
+/* Markku Laakso, 2016 */
+
+body {
+    background-color: #EDEDED;
+}
+
+.container {
+    background-color: #CCCCCC;
+}
+
 .right {
     text-align: right;
 }
@@ -32,24 +43,32 @@
     padding: 1px 12px 12px 12px;
     margin-top: 10px;
     margin-bottom: 8px;
-    background-color: #CECECE;
+    background-color: #EEEEEE;
 }
 
 .lomake {
     padding: 1px 12px 12px 12px;
     margin-bottom: 8px;
-    background-color: #F5F5F5;
+    background-color: #FDFDFD;
 }
 
 .lista {
     padding: 1px 12px 12px 12px;
     margin-bottom: 8px;
-    background-color: #F5F5F5;
+    background-color: #FDFDFD;
 }
 
 .footer {
     padding: 6px 12px 12px 12px;
     margin-top: 12px;
     margin-bottom: 8px;
-    background-color: #CECECE;
+    background-color: #EEEEEE;
+}
+
+	
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
