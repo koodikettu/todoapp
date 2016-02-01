@@ -4,4 +4,4 @@ Tehtävälista on Angularilla toteutettu one-page-app, jonka avulla voi pitää 
 Tehtävälista ei käytä tietokantaa, joten kun sivu ladataan uudestaan, käyttäjän syöttämä tieto menetetään.
 Tehtävälista sisältää kuitenkin valmiiksi kaksi esimerkkitehtävää.
 
-[Linkki}(marklaak.users.cs.helsinki.fi/todoapp) sovellukseen.
+[Linkki](marklaak.users.cs.helsinki.fi/todoapp) sovellukseen.
