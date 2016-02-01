@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    background-color: #CCCCCC;
+    background-color: #EEEEEE;
 }
 
 .right {
@@ -43,7 +43,8 @@ body {
     padding: 1px 12px 12px 12px;
     margin-top: 10px;
     margin-bottom: 8px;
-    background-color: #EEEEEE;
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 .lomake {
